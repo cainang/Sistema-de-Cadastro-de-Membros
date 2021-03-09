@@ -1,0 +1,80 @@
+#card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+#carteirinha2 {
+    height: 395px;
+    width: 600px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#carteirinha3 {
+    height: 395px;
+    width: 600px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#id2{
+    color: white;
+    font-size: 17px;
+    background-color: #8B0000;
+    border-radius: 10px;
+    padding: 0px 10px 0px 10px;
+    margin-bottom: 2px 
+}
+
+#nome2{
+    color: white;
+    font-size: 20px;
+    background-color: #8B0000;
+    border-radius: 10px;
+    margin-bottom: 2px
+}
+
+#cargo2{
+    color: black;
+    font-size: 17px;
+}
+
+#img2{
+    width: 3cm;
+    height: 4cm;
+}
+
+#corpo{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 0;
+}
+
+#foto{
+    width: 3cm;
+    height: 4cm;
+}
+
+#parte1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#linha2{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#linha3{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+}

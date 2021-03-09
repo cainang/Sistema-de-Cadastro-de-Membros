@@ -6,12 +6,21 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.1",
+    "antd": "^4.12.3",
+    "axios": "^0.21.1",
+    "firebase": "^8.2.9",
+    "moment": "^2.29.1",
+    "puppeteer": "^7.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-highlight-words": "^0.17.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
+    "electron": "electron .",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "electron": "^11.2.3"
   }
 }
