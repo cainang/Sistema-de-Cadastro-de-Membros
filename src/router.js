@@ -15,7 +15,7 @@ import NotFoundPage from './pages/NotFoundPage';
 const Routes = () => {
     return (
         <AuthProvider>
-        <MemoryRouter>
+        <BrowserRouter>
         <Switch>
                 <PrivateRoute exact path={'/'} component={HomePage} />
                 <Route exact path={'/login'} component={LoginPage} />
@@ -27,7 +27,7 @@ const Routes = () => {
                 <Route component={NotFoundPage} />
                 <PrivateRoute exact path={'/edit/:id'} component={EditPage} />
         </Switch>
-        </MemoryRouter>
+        </BrowserRouter>
         </AuthProvider>
     )
 }

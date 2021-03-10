@@ -131,7 +131,13 @@ const PreviewPage = () => {
                                 </div>
                             </div>
                             <div id="footer">
-
+                                <div id="top">
+                                    <p style={{color: 'black', marginBottom: 0, marginTop: '25px'}}>________________________</p>
+                                </div>
+                                <div id="down">
+                                    <p style={{color: 'black', fontSize: '17px', marginBottom: 0}}>Ass. Pastor Presidente</p>
+                                    <p style={{color: 'black', fontSize: '15px', marginBottom: 0}}>Pastor Fabio Santos</p>
+                                </div>
                             </div>
                         </div>
                     </div>
