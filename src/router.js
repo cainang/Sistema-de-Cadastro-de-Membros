@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect, Router } from 'react-router-dom';
+import { BrowserRouter, MemoryRouter, Switch, Route, Redirect, Router } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import CadastroPage from './pages/CadastroPage';
 import CadastroViewPage from './pages/CadastroViewPage';
@@ -15,7 +15,7 @@ import NotFoundPage from './pages/NotFoundPage';
 const Routes = () => {
     return (
         <AuthProvider>
-        <BrowserRouter>
+        <MemoryRouter>
         <Switch>
                 <PrivateRoute exact path={'/'} component={HomePage} />
                 <Route exact path={'/login'} component={LoginPage} />
@@ -27,7 +27,7 @@ const Routes = () => {
                 <Route component={NotFoundPage} />
                 <PrivateRoute exact path={'/edit/:id'} component={EditPage} />
         </Switch>
-        </BrowserRouter>
+        </MemoryRouter>
         </AuthProvider>
     )
 }
