@@ -7,6 +7,7 @@ import api from '../../services/api';
 const PreviewPage = () => {
     const {id} = useParams();
 
+    const [data, setData] = useState(false);
     const [idUser, setIdUser] = useState(null);
     const [nome, setNome] = useState(null);
     const [cargo, setCargo] = useState(null);
@@ -40,13 +41,14 @@ const PreviewPage = () => {
             setDataBatismo(res.data.data_batismo.dateString);
             setDataMembro(res.data.data_membro.dateString);
             setDataNascimento(res.data.data_nascimento.dateString);
+            setData(true);
         })
     }, []);
 
     return (
         <div className="App">
             <header className="App-header">
-                {data.length !== 0 && (
+                {data == true && (
                     <div id='card'>
                         <div id='carteirinha2'>
                             <div id="cabeca">
