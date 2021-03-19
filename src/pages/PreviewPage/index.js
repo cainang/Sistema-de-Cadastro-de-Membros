@@ -7,7 +7,7 @@ import api from '../../services/api';
 const PreviewPage = () => {
     const {id} = useParams();
 
-    const [data, setData] = useState(false);
+    const [data, setData] = useState([]);
     const [idUser, setIdUser] = useState(null);
     const [nome, setNome] = useState(null);
     const [cargo, setCargo] = useState(null);
@@ -26,30 +26,33 @@ const PreviewPage = () => {
 
     useEffect(async () => {
         await api.get(`membro/${id}`).then(res => {
-            console.log(res.data);
-            setIdUser(res.data.id);
-            setNome(res.data.nome);
-            setCargo(res.data.cargo);
-            setCongregacao(res.data.congregacao);
-            setCpf(res.data.cpf);
-            setRg(res.data.rg);
-            setRua(res.data.endereco.rua);
-            setNumero(res.data.endereco.numero);
-            setBairro(res.data.endereco.bairro);
-            setCidade(res.data.endereco.cidade);
-            setNaturalidade(res.data.naturalidade);
-            setEstadoCivil(res.data.estado_civil);
-            setDataBatismo(res.data.data_batismo.dateString);
-            setDataMembro(res.data.data_membro.dateString);
-            setDataNascimento(res.data.data_nascimento.dateString);
-            setData(true);
+            
+            setData(res.data);
         })
     }, []);
+    
+    data.map(res => {
+        setIdUser(res.id);
+        setNome(res.nome);
+        setCargo(res.cargo);
+        setCongregacao(res.congregacao);
+        setCpf(res.cpf);
+        setRg(res.rg);
+        setRua(res.endereco.rua);
+        setNumero(res.endereco.numero);
+        setBairro(res.endereco.bairro);
+        setCidade(res.endereco.cidade);
+        setNaturalidade(res.naturalidade);
+        setEstadoCivil(res.estado_civil);
+        setDataBatismo(res.data_batismo.dateString);
+        setDataMembro(res.data_membro.dateString);
+        setDataNascimento(res.data_nascimento.dateString);
+    })
 
     return (
         <div className="App">
             <header className="App-header">
-                {data == true && (
+                {data.length !== 0 && (
                     <div id='card'>
                         <div id='carteirinha2'>
                             <div id="cabeca">
