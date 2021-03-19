@@ -6,9 +6,8 @@ import api from '../../services/api';
 
 const PreviewPage = () => {
     const {id} = useParams();
-    let idUser = id - 1;
 
-    const [id, setId] = useState(null);
+    const [idUser, setIdUser] = useState(null);
     const [nome, setNome] = useState(null);
     const [cargo, setCargo] = useState(null);
     const [congregacao, setCongregacao] = useState(null);
@@ -26,7 +25,7 @@ const PreviewPage = () => {
 
     useEffect(async () => {
         await api.get(`membro/${id}`).then(res => {
-            setId(res.data.id);
+            setIdUser(res.data.id);
             setNome(res.data.nome);
             setCargo(res.data.cargo);
             setCongregacao(res.data.congregacao);
@@ -59,7 +58,7 @@ const PreviewPage = () => {
                                     <div id="foto" style={{ backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', border: '#8B0000 solid 1px'}}></div>
                                     <div>
                                         <p style={{color: 'black', fontSize: '20px', marginBottom: '5px'}}>ID</p>
-                                        <p id='id2'>{id}</p>
+                                        <p id='id2'>{idUser}</p>
                                     </div>
                                 </div>
                                 <div id='parte2'>
