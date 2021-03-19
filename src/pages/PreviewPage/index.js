@@ -26,6 +26,7 @@ const PreviewPage = () => {
 
     useEffect(async () => {
         await api.get(`membro/${id}`).then(res => {
+            console.log(res.data);
             setIdUser(res.data.id);
             setNome(res.data.nome);
             setCargo(res.data.cargo);
